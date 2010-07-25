@@ -1,279 +1,239 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
-
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
-
-
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
-
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
-
-      #footer {
-        clear: both;
-      }
-
-
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
-
-
-      #header {
-        background-image: url("images/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
-
-
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
-      }
-
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-
-
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-
-
-      #search {
-        margin: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 11px;
-      }
-      #search input {
-        font-size: 11px;
-        margin: 2px;
-      }
-      #search-text {width: 170px}
-
-
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-
-    </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-
-      function prepend() {
-        search = document.getElementById('search-text');
-        text = search.value;
-        search.value = 'site:rubyonrails.org ' + text;
-      }
-
-      window.onload = function() {
-        document.getElementById('search-text').value = '';
-      }
-    </script>
-  </head>
-  <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <form id="search" action="http://www.google.com/search" method="get" onSubmit="prepend();">
-              <input type="hidden" name="hl" value="en" />
-              <input type="text" id="search-text" name="q" value="site:rubyonrails.org " />
-              <input type="submit" value="Search" /> the Rails site
-            </form>
-          </li>
-
-          <li>
-            <h3>Join the community</h3>
-            <ul class="links">
-              <li><a href="http://www.rubyonrails.org/">Ruby on Rails</a></li>
-              <li><a href="http://weblog.rubyonrails.org/">Official weblog</a></li>
-              <li><a href="http://wiki.rubyonrails.org/">Wiki</a></li>
-            </ul>
-          </li>
-
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
-              <li><a href="http://corelib.rubyonrails.org/">Ruby core</a></li>
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
-        </div>
-
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
-
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
-
-          <ol>
-            <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
-
-            <li>
-              <h2>Set up a default route and remove or rename this file</h2>
-              <p>Routes are set up in config/routes.rb.</p>
-            </li>
-
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:migrate</code> to create your database. If you're not using SQLite (the default), edit <code>config/database.yml</code> with your username and password.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-
-      <div id="footer">&nbsp;</div>
-    </div>
-  </body>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Gintellect by 2PiRadians</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="stylesheets/default.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<!-- start header -->
+<div id="header">
+	<div id="logo">
+		<h1><a href="#">Gintellect</a></h1>
+		<p>By 2PiRadians</p>
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="#">Home</a></li>
+			<li><a href="#">Profile</a></li>
+			<li><a href="#">Games</a></li>
+			<li><a href="#">News</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end header -->
+<!-- start page -->
+<div id="page">
+	<!-- start leftbar -->
+	<div id="leftbar" class="sidebar">
+		<ul>
+			<li>
+				<h2>Categories</h2>
+				<ul>
+					<li><a href="#">Aliquam libero</a></li>
+					<li><a href="#">Consectetuer elit</a></li>
+					<li><a href="#">Metus aliquam</a></li>
+					<li><a href="#">Suspendisse mauris</a></li>
+					<li><a href="#">Urnanet non semper</a></li>
+					<li><a href="#">Proin porttitor</a></li>
+				</ul>
+			</li>
+			<li>
+				<h2>Archives</h2>
+				<ul>
+					<li><a href="#">Aliquam libero</a></li>
+					<li><a href="#">Consectetuer elit</a></li>
+					<li><a href="#">Metus aliquam</a></li>
+					<li><a href="#">Suspendisse mauris</a></li>
+					<li><a href="#">Urnanet non semper</a></li>
+					<li><a href="#">Proin porttitor</a></li>
+				</ul>
+			</li>
+			<li>
+				<h2>Aliquam</h2>
+				<ul>
+					<li><a href="#">Aliquam libero</a></li>
+					<li><a href="#">Consectetuer elit</a></li>
+					<li><a href="#">Metus aliquam</a></li>
+					<li><a href="#">Suspendisse mauris</a></li>
+					<li><a href="#">Urnanet non semper</a></li>
+					<li><a href="#">Proin porttitor</a></li>
+				</ul>
+			</li>
+			<li>
+				<h2>Urnanet</h2>
+				<ul>
+					<li><a href="#">Aliquam libero</a></li>
+					<li><a href="#">Consectetuer elit</a></li>
+					<li><a href="#">Metus aliquam</a></li>
+					<li><a href="#">Suspendisse mauris</a></li>
+					<li><a href="#">Urnanet non semper</a></li>
+					<li><a href="#">Proin porttitor</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!-- end leftbar -->
+	<!-- start content -->
+	<div id="content">
+		<div class="post">
+			<h1 class="title"><a href="#">Welcome to Our Website!</a></h1>
+			<p class="byline"><small>Posted on October 1st, 2007 by <a href="#">Free CSS Templates</a></small></p>
+			<div class="entry"> <img src="images/img07.jpg" alt="" width="122" height="122" class="left" />
+				<p><strong>Experience</strong> is a free, fully standards-compliant CSS template designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. This free template is released under a <a href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attributions 2.5</a> license, so you're pretty much free to do whatever you want with it  (even use it commercially) provided you keep the links in the footer intact. Have fun with it :)</p>
+				<p>This template is also available as a <a href="http://www.freewpthemes.net/preview/experience/">WordPress theme</a> at <a href="http://www.freewpthemes.net/">Free WordPress Themes</a>. The photo is from <a href="http://www.pdphoto.org/">PDPhoto.org</a>. </p>
+			</div>
+			<p class="links"><a href="#" class="more">Read More</a> &nbsp;&nbsp;&nbsp; <a href="#" class="comments">No Comments</a></p>
+		</div>
+		<div class="post">
+			<h2 class="title"><a href="#">Sample Tags</a></h2>
+			<p class="byline"><small>Posted on October 1st, 2007 by <a href="#">Free CSS Templates</a></small></p>
+			<div class="entry">
+				<p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. Quisque dictum integer nisl risus, sagittis convallis, rutrum id, congue, and nibh.</p>
+				<h3>An H3 Followed by a Blockquote:</h3>
+				<blockquote>
+					<p>&#8220;Donec leo, vivamus nibh in augue at urna congue rutrum. Quisque dictum integer nisl risus, sagittis convallis, rutrum id, congue, and nibh.&#8221;</p>
+				</blockquote>
+				<h3>Bulleted List:</h3>
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+					<li>Phasellus nec erat sit amet nibh pellentesque congue.</li>
+					<li>Cras vitae metus aliquam risus pellentesque pharetra.</li>
+				</ul>
+				<h3>Numbered List:</h3>
+				<ol>
+					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+					<li>Phasellus nec erat sit amet nibh pellentesque congue.</li>
+					<li>Cras vitae metus aliquam risus pellentesque pharetra.</li>
+				</ol>
+			</div>
+			<p class="links"><a href="#" class="more">Read More</a> &nbsp;&nbsp;&nbsp; <a href="#" class="comments">No Comments</a></p>
+		</div>
+	</div>
+	<!-- end content -->
+	<!-- start rightbar -->
+	<div id="rightbar" class="sidebar">
+		<ul>
+			<li>
+				<form id="searchform" method="get" action="#">
+					<div>
+						<input type="text" name="s" id="s" size="15" value="" />
+						<br />
+						<input type="submit" value="Search" />
+					</div>
+				</form>
+			</li>
+			<li>
+				<h2>Tags</h2>
+				<a href="#">dolor</a> <a href="#">ipsum</a> <a href="#">lorem</a> <a href="#">sit amet</a> <a href="#">dolor</a> <a href="#">ipsum</a> <a href="#">lorem</a> <a href="#">sit amet</a> </li>
+			<li>
+				<h2>Recent Posts</h2>
+				<ul>
+					<li><a href="#">Aliquam libero</a></li>
+					<li><a href="#">Consectetuer adipiscing elit</a></li>
+					<li><a href="#">Metus aliquam pellentesque</a></li>
+					<li><a href="#">Suspendisse iaculis mauris</a></li>
+					<li><a href="#">Urnanet non molestie semper</a></li>
+					<li><a href="#">Proin gravida orci porttitor</a></li>
+				</ul>
+			</li>
+			<li>
+				<h2>Recent Comments</h2>
+				<ul>
+					<li><a href="#">Free CSS Templates</a> on <a href="#">Aliquam libero</a></li>
+					<li><a href="#">Free CSS Templates</a> on <a href="#">Consectetuer adipiscing elit</a></li>
+					<li><a href="#">Free CSS Templates</a> on <a href="#">Metus aliquam pellentesque</a></li>
+					<li><a href="#">Free CSS Templates</a> on <a href="#">Suspendisse iaculis mauris</a></li>
+					<li><a href="#">Free CSS Templates</a> on <a href="#">Urnanet non molestie semper</a></li>
+					<li><a href="#">Free CSS Templates</a> on <a href="#">Proin gravida orci porttitor</a></li>
+				</ul>
+			</li>
+			<li>
+				<h2>Calendar</h2>
+				<div id="calendar_wrap">
+					<table summary="Calendar">
+						<caption>
+						October 2007
+						</caption>
+						<thead>
+							<tr>
+								<th abbr="Monday" scope="col" title="Monday">M</th>
+								<th abbr="Tuesday" scope="col" title="Tuesday">T</th>
+								<th abbr="Wednesday" scope="col" title="Wednesday">W</th>
+								<th abbr="Thursday" scope="col" title="Thursday">T</th>
+								<th abbr="Friday" scope="col" title="Friday">F</th>
+								<th abbr="Saturday" scope="col" title="Saturday">S</th>
+								<th abbr="Sunday" scope="col" title="Sunday">S</th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<td abbr="September" colspan="3" id="prev"><a href="#" title="View posts for September 2007">&laquo; Sep</a></td>
+								<td class="pad">&nbsp;</td>
+								<td colspan="3" id="next">&nbsp;</td>
+							</tr>
+						</tfoot>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+								<td id="today">4</td>
+								<td>5</td>
+								<td>6</td>
+								<td>7</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>9</td>
+								<td>10</td>
+								<td>11</td>
+								<td>12</td>
+								<td>13</td>
+								<td>14</td>
+							</tr>
+							<tr>
+								<td>15</td>
+								<td>16</td>
+								<td>17</td>
+								<td>18</td>
+								<td>19</td>
+								<td>20</td>
+								<td>21</td>
+							</tr>
+							<tr>
+								<td>22</td>
+								<td>23</td>
+								<td>24</td>
+								<td>25</td>
+								<td>26</td>
+								<td>27</td>
+								<td>28</td>
+							</tr>
+							<tr>
+								<td>29</td>
+								<td>30</td>
+								<td><a href="#">31</a></td>
+								<td class="pad" colspan="4">&nbsp;</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- end rightbar -->
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end page -->
+<hr />
+<div id="footer">
+	<p>&copy;2010 All Rights Reserved. &nbsp;&bull;&nbsp; Design based on Experience from <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+</div>
+</body>
 </html>
