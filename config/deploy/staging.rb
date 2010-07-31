@@ -22,7 +22,7 @@ after "deploy:symlink", "git:update_git_to_staging"
 namespace :git do
   desc "Update git staging branch to master"
   task :update_git_to_staging do
-    run "cd #{release_path} && git checkout staging && git merge master && git push origin staging"
+    run "cd #{release_path} && git checkout edge && git merge master && git push origin edge"
   end
 end 
 
