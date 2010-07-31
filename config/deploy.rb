@@ -2,7 +2,7 @@ default_run_options[:pty] = true  # Must be set for the password prompt from git
 set :application, "gintellect"
 
 require 'capistrano/ext/multistage'
-set :stages, %w(staging production)
+set :stages, %w(edge production)
 set :default_stage, "production"
 
 require '~/.rvm/lib/rvm/capistrano' # Adjust for load path

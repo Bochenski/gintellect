@@ -21,7 +21,7 @@
     password:
     host: localhost
     
-  staging:
+  edge:
     adapter: mysql
     encoding: utf8
     reconnect: false

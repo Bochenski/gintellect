@@ -2,7 +2,7 @@ set :user, "twopiradians"
 set :password, "Glieck>21"
 set :deploy_to, "/home/twopiradians/apps/gintellect"
 
-set :rails_env, "staging"
+set :rails_env, "edge"
 
 role :web, "twopiradians"                          # Your HTTP server, Apache/etc
 role :app, "twopiradians"                          # This may be the same as your `Web` server
