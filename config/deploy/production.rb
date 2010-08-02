@@ -9,7 +9,7 @@ role :web, "184.106.229.55"                          # Your HTTP server, Apache/
 role :app, "184.106.229.55"                          # This may be the same as your `Web` server
 role :db,  "184.106.229.55", :primary => true # This is where Rails migrations will run
 
-set :branch, "edge"
+set :branch, "master"
 
 after "deploy:symlink", "deploy:restart"
 namespace :deploy do
@@ -34,6 +34,6 @@ end
 
 #namespace :deploy do
 #  task :bundle do
-#    run "cd #{release_path} && #{sudo} RAILS_ENV=#{rails_env} bundle install #{shared_path}/gems/cache"
+#    run "cd #{release_path} &&  bundle install"
 #  end
 #end

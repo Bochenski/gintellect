@@ -41,7 +41,7 @@ GEM
     mime-types (1.16)
     mysql (2.8.1)
     polyglot (0.3.1)
-    rack (1.1.0)
+    rack (1.2.0)
     rack-mount (0.6.9)
       rack (>= 1.0.0)
     rack-test (0.5.4)
