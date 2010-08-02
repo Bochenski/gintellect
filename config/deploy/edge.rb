@@ -18,10 +18,10 @@ namespace :deploy do
   end
 end
 
-after "deploy:symlink", "git:update_git_to_staging"
+after "deploy:symlink", "git:update_edge_branch"
 namespace :git do
-  desc "Update git staging branch to master"
-  task :update_git_to_staging do
+  desc "Update git edge branch to master"
+  task :update_edge_branch do
     run "cd #{release_path} && git checkout edge && git merge deploy && git push origin edge"
   end
 end 
