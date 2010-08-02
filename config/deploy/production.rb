@@ -1,4 +1,4 @@
-ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "id_rsa")]
+set :port, 36000
 
 set :user, "twopiradians"
 set :deploy_to, "/home/twopiradians/apps/gintellect"
