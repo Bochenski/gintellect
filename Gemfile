@@ -11,10 +11,13 @@ gem 'mysql2'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
-
+gem 'capistrano'
+gem 'capistrano-ext'
 # To use debugger
 # gem 'ruby-debug'
+
+# Test with unit tests
+gem 'test-unit'
 
 # Bundle the extra gems:
 # gem 'bj'
