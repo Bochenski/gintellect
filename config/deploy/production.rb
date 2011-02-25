@@ -9,7 +9,7 @@ role :web, "184.106.229.55"                          # Your HTTP server, Apache/
 role :app, "184.106.229.55"                          # This may be the same as your `Web` server
 role :db,  "184.106.229.55", :primary => true # This is where Rails migrations will run
 
-set :branch, "master"
+set :branch, "edge"
 
 after "deploy:symlink", "deploy:restart"
 namespace :deploy do
