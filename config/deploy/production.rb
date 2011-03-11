@@ -5,9 +5,9 @@ set :deploy_to, "/home/twopiradians/apps/gintellect"
 
 set :rails_env, "production"
 
-role :web, "184.106.229.55"                          # Your HTTP server, Apache/etc
-role :app, "184.106.229.55"                          # This may be the same as your `Web` server
-role :db,  "184.106.229.55", :primary => true # This is where Rails migrations will run
+role :web, "www.gintellect.com"                          # Your HTTP server, Apache/etc
+role :app, "www.gintellect.com"                          # This may be the same as your `Web` server
+role :db,  "www.gintellect.com", :primary => true # This is where Rails migrations will run
 
 set :branch, "master"
 
