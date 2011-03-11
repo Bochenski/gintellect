@@ -9,7 +9,7 @@ role :web, "www.gintellect.com"                          # Your HTTP server, Apa
 role :app, "www.gintellect.com"                          # This may be the same as your `Web` server
 role :db,  "www.gintellect.com", :primary => true # This is where Rails migrations will run
 
-set :branch, "master"
+set :branch, "edge"
 
 after "deploy:symlink", "deploy:restart"
 namespace :deploy do
